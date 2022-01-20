@@ -184,11 +184,8 @@ body {
 
 /* image frame style css here..... */
 
-.gallery {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+.banner-right img {
+    border: 4px solid #22bedd;
 }
 
 .section-title {
@@ -196,14 +193,21 @@ body {
 }
 
 .section-title h1 {
-    color: #12B0E8;
-    font-size: 30px;
-    margin: 50px 0px;
-    border-left: 3px solid #12B0E8;
-    border-right: 3px solid #12B0E8;
+    color: #22bedd;
+    font-size: 40px;
+    margin: 50px 0;
+    border-left: 3px solid #22bedd;
+    border-right: 3px solid #22bedd;
     display: inline-block;
     padding: 0 10px;
     line-height: .8;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .photo {
@@ -214,13 +218,13 @@ body {
 }
 
 .photo img {
-    height: 100%;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .border {
-    background-color: white;
+    background-color: #fff;
     position: absolute;
     transition: .7s ease-in-out;
 }
@@ -273,17 +277,14 @@ body {
     bottom: 5px;
 }
 
-
-/* image frame style css end here..... */
-
 .photo-content {
     position: absolute;
     width: 100%;
     height: 100%;
-    color: white;
-    bottom: 0px;
-    left: 0px;
+    color: #fff;
     padding-left: 30px;
+    bottom: 0;
+    left: 0;
     transform: translateY(400px);
     transition: .3s ease-out;
 }
@@ -297,10 +298,10 @@ body {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, .4);
-    top: 0px;
-    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
+    top: 0;
+    left: 0;
     transition: .3s linear;
 }
 
