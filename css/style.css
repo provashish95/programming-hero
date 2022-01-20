@@ -34,6 +34,10 @@ body {
     align-items: center;
 }
 
+.banner-right img {
+    border: 3px solid #12B0E8;
+}
+
 .banner-title {
     font-size: 60px;
     white-space: nowrap;
@@ -175,4 +179,131 @@ body {
     100% {
         content: ' ';
     }
+}
+
+
+/* image frame style css here..... */
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.section-title h1 {
+    color: #12B0E8;
+    font-size: 30px;
+    margin: 50px 0px;
+    border-left: 3px solid #12B0E8;
+    border-right: 3px solid #12B0E8;
+    display: inline-block;
+    padding: 0 10px;
+    line-height: .8;
+}
+
+.photo {
+    height: 280px;
+    width: 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.border {
+    background-color: white;
+    position: absolute;
+    transition: .7s ease-in-out;
+}
+
+.border.top,
+.border.bottom {
+    height: 4px;
+    width: 270px;
+}
+
+.border.left,
+.border.right {
+    height: 270px;
+    width: 4px;
+}
+
+.border.top {
+    top: 5px;
+    right: 100%;
+}
+
+.border.bottom {
+    bottom: 5px;
+    left: 100%;
+}
+
+.border.left {
+    left: 5px;
+    top: 100%;
+}
+
+.border.right {
+    right: 5px;
+    bottom: 100%;
+}
+
+.photo:hover .border.top {
+    right: 5px;
+}
+
+.photo:hover .border.bottom {
+    left: 5px;
+}
+
+.photo:hover .border.left {
+    top: 5px;
+}
+
+.photo:hover .border.right {
+    bottom: 5px;
+}
+
+
+/* image frame style css end here..... */
+
+.photo-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    bottom: 0px;
+    left: 0px;
+    padding-left: 30px;
+    transform: translateY(400px);
+    transition: .3s ease-out;
+}
+
+.photo:hover .photo-content {
+    transform: translateY(200px);
+}
+
+.photo::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .4);
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: .3s linear;
+}
+
+.photo:hover::before {
+    opacity: 1;
 }
